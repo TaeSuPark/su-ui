@@ -3,5 +3,5 @@ type HStackProps = {
 }
 
 export default function HStack({ children }: HStackProps) {
-  return <div style={{ display: "flex" }}>{children}</div>
+  return <div className="flex flex-row">{children}</div>
 }

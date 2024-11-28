@@ -3,5 +3,5 @@ type TypographyProps = {
 }
 
 export default function Typography({ children }: TypographyProps) {
-  return <span style={{ display: "flex" }}>{children}</span>
+  return <span className="flex whitespace-normal font-sans">{children}</span>
 }

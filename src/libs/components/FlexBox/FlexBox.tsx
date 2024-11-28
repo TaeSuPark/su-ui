@@ -3,5 +3,5 @@ type FlexBoxProps = {
 }
 
 export default function FlexBox({ children }: FlexBoxProps) {
-  return <div style={{ display: "flex" }}>{children}</div>
+  return <div className="flex">{children}</div>
 }

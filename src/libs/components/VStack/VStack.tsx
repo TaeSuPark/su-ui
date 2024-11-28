@@ -3,5 +3,5 @@ type VStackProps = {
 }
 
 export default function VStack({ children }: VStackProps) {
-  return <div style={{ display: "flex" }}>{children}</div>
+  return <div className="flex flex-col">{children}</div>
 }
