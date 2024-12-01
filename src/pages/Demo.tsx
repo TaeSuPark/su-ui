@@ -4,13 +4,15 @@ type DemoProps = {}
 
 export default function Demo({}: DemoProps) {
   return (
-    <div className="flex flex-col items-center justify-center p-4">
-      <h1 className="text-2xl font-bold">Demo</h1>
-      <p className="text-lg">This is a demo page</p>
-      <FlexBox>FlexBox</FlexBox>
-      <VStack>VStack</VStack>
-      <HStack>HStack</HStack>
-      <Typography>Typography</Typography>
-    </div>
+    <VStack gap={4}>
+      <Typography>Demo1</Typography>
+      <Typography>Demo2</Typography>
+      <Typography>Demo3</Typography>
+      <HStack gap={4}>
+        <Typography>Demo4</Typography>
+        <Typography>Demo5</Typography>
+        <Typography>Demo6</Typography>
+      </HStack>
+    </VStack>
   )
 }
