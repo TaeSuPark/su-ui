@@ -3,7 +3,7 @@ import { TypographyVariants } from "../../styles/styles"
 import cn from "../../utils/cn"
 
 interface TypographyProps
-  extends React.HTMLAttributes<HTMLSpanElement>,
+  extends React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof TypographyVariants> {
   children: React.ReactNode | React.ReactNode[]
   additionalCss?: string
@@ -19,7 +19,7 @@ export default function Typography({
   ...props
 }: TypographyProps) {
   return (
-    <span
+    <p
       className={cn(
         TypographyVariants({
           typoColor,
@@ -32,6 +32,6 @@ export default function Typography({
       {...props}
     >
       {children}
-    </span>
+    </p>
   )
 }

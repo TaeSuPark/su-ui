@@ -26,43 +26,31 @@ const fontWeightValues = {
   700: "font-bold",
 }
 
-// color
-
-const colorValues = (type: "text" | "bg") => {
-  return {
-    inherit: `${type}-inherit`,
-    transparent: `${type}-transparent`,
-    current: `${type}-current`,
-    black: `${type}-black`,
-    white: `${type}-white`,
-    [`gray-lighter`]: `${type}-gray-300`,
-    [`gray-main`]: `${type}-gray-400`,
-    [`gray-darker`]: `${type}-gray-500`,
-    [`red-lighter`]: `${type}-red-300`,
-    [`red-main`]: `${type}-red-400`,
-    [`red-darker`]: `${type}-red-500`,
-    [`orange-lighter`]: `${type}-orange-300`,
-    [`orange-main`]: `${type}-orange-400`,
-    [`orange-darker`]: `${type}-orange-500`,
-    [`yellow-lighter`]: `${type}-yellow-300`,
-    [`yellow-main`]: `${type}-yellow-400`,
-    [`yellow-darker`]: `${type}-yellow-500`,
-    [`green-lighter`]: `${type}-green-300`,
-    [`green-main`]: `${type}-green-400`,
-    [`green-darker`]: `${type}-green-500`,
-    [`blue-lighter`]: `${type}-blue-300`,
-    [`blue-main`]: `${type}-blue-400`,
-    [`blue-darker`]: `${type}-blue-500`,
-    [`indigo-lighter`]: `${type}-indigo-300`,
-    [`indigo-main`]: `${type}-indigo-400`,
-    [`indigo-darker`]: `${type}-indigo-500`,
-    [`purple-lighter`]: `${type}-purple-300`,
-    [`purple-main`]: `${type}-purple-400`,
-    [`purple-darker`]: `${type}-purple-500`,
-    [`pink-lighter`]: `${type}-pink-300`,
-    [`pink-main`]: `${type}-pink-400`,
-    [`pink-darker`]: `${type}-pink-500`,
-  }
+// text-color
+const textColorValues = {
+  inherit: "text-inherit",
+  transparent: "text-transparent",
+  current: "text-current",
+  black: "text-black",
+  white: "text-white",
+  [`gray-lighter`]: "text-gray-300",
+  [`gray-main`]: "text-gray-400",
+  [`gray-darker`]: "text-gray-500",
+  [`red-lighter`]: "text-red-300",
+  [`red-main`]: "text-red-400",
+  [`red-darker`]: "text-red-500",
+  [`yellow-lighter`]: "text-yellow-300",
+  [`yellow-main`]: "text-yellow-400",
+  [`yellow-darker`]: "text-yellow-500",
+  [`green-lighter`]: "text-green-300",
+  [`green-main`]: "text-green-400",
+  [`green-darker`]: "text-green-500",
+  [`blue-lighter`]: "text-blue-300",
+  [`blue-main`]: "text-blue-400",
+  [`blue-darker`]: "text-blue-500",
+  [`purple-lighter`]: "text-purple-300",
+  [`purple-main`]: "text-purple-400",
+  [`purple-darker`]: "text-purple-500",
 }
 
 // space
@@ -183,7 +171,7 @@ export const VStackVariants = cva(`flex`, {
 
 export const TypographyVariants = cva(``, {
   variants: {
-    typoColor: colorValues("text"),
+    typoColor: textColorValues,
     size: fontValues,
     weight: fontWeightValues,
     whiteSpace: {
