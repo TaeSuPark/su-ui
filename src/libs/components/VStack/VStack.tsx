@@ -1,6 +1,6 @@
 import { VariantProps } from "class-variance-authority"
-import { VStackVariants } from "../../styles/styles"
 import cn from "../../utils/cn"
+import { VStackVariants } from "../../styles"
 
 interface VStackProps
   extends React.HTMLAttributes<HTMLDivElement>,
