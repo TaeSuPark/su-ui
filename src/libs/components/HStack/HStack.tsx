@@ -1,6 +1,6 @@
 import { VariantProps } from "class-variance-authority"
-import { HStackVariants } from "../../styles/styles"
 import cn from "../../utils/cn"
+import { HStackVariants } from "../../styles"
 
 interface HStackProps
   extends React.HTMLAttributes<HTMLDivElement>,

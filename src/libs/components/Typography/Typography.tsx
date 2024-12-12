@@ -1,7 +1,6 @@
 import { VariantProps } from "class-variance-authority"
-import { TypographyVariants } from "../../styles/styles"
 import cn from "../../utils/cn"
-
+import { TypographyVariants } from "../../styles"
 interface TypographyProps
   extends React.HTMLAttributes<HTMLElement>,
     VariantProps<typeof TypographyVariants> {

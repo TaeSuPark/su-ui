@@ -1,5 +1,5 @@
 import { VariantProps } from "class-variance-authority"
-import { FlexBoxVariants } from "../../styles/styles"
+import { FlexBoxVariants } from "../../styles"
 import cn from "../../utils/cn"
 
 interface FlexBoxProps

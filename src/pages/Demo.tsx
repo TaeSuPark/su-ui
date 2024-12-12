@@ -4,7 +4,7 @@ type DemoProps = {}
 
 export default function Demo({}: DemoProps) {
   return (
-    <VStack gap={4}>
+    <VStack gap={4} mt={40}>
       <Typography typoColor="black" size="sm">
         검은색
       </Typography>

@@ -1,9 +1,7 @@
-import { cva } from "class-variance-authority"
-
-// text variants
+import { SpaceType } from "./styleTypes"
 
 // font-size
-const fontValues = {
+export const fontValues = {
   xs: "text-xs",
   sm: "text-sm",
   base: "text-base",
@@ -20,14 +18,14 @@ const fontValues = {
 }
 
 // font-weight
-const fontWeightValues = {
+export const fontWeightValues = {
   400: "font-normal",
   500: "font-medium",
   700: "font-bold",
 }
 
 // text-color
-const textColorValues = {
+export const textColorValues = {
   inherit: "text-inherit",
   transparent: "text-transparent",
   current: "text-current",
@@ -53,27 +51,34 @@ const textColorValues = {
   [`purple-darker`]: "text-purple-500",
 }
 
-// space
-type SpaceType =
-  | "p"
-  | "px"
-  | "py"
-  | "pt"
-  | "pr"
-  | "pb"
-  | "pl"
-  | "m"
-  | "mx"
-  | "my"
-  | "mt"
-  | "mr"
-  | "mb"
-  | "ml"
-  | "gap-x"
-  | "gap-y"
-  | "gap"
+// background-color
+export const bgColorValues = {
+  inherit: "bg-inherit",
+  transparent: "bg-transparent",
+  current: "bg-current",
+  black: "bg-black",
+  white: "bg-white",
+  [`gray-lighter`]: "bg-gray-300",
+  [`gray-main`]: "bg-gray-400",
+  [`gray-darker`]: "bg-gray-500",
+  [`red-lighter`]: "bg-red-300",
+  [`red-main`]: "bg-red-400",
+  [`red-darker`]: "bg-red-500",
+  [`yellow-lighter`]: "bg-yellow-300",
+  [`yellow-main`]: "bg-yellow-400",
+  [`yellow-darker`]: "bg-yellow-500",
+  [`green-lighter`]: "bg-green-300",
+  [`green-main`]: "bg-green-400",
+  [`green-darker`]: "bg-green-500",
+  [`blue-lighter`]: "bg-blue-300",
+  [`blue-main`]: "bg-blue-400",
+  [`blue-darker`]: "bg-blue-500",
+  [`purple-lighter`]: "bg-purple-300",
+  [`purple-main`]: "bg-purple-400",
+  [`purple-darker`]: "bg-purple-500",
+}
 
-const spaceValues = (type: SpaceType) => {
+export const spaceValues = (type: SpaceType) => {
   return {
     0: `${type}-0`,
     2: `${type}-0.5`,
@@ -97,7 +102,7 @@ const spaceValues = (type: SpaceType) => {
   }
 }
 
-const flexBoxCommon = {
+export const flexBoxCommon = {
   direction: {
     default: "flex-row",
     row: "flex-row",
@@ -130,62 +135,3 @@ const flexBoxCommon = {
   mb: spaceValues("mb"),
   ml: spaceValues("ml"),
 }
-
-export const FlexBoxVariants = cva(`flex`, {
-  variants: {
-    ...flexBoxCommon,
-    gap: spaceValues("gap"),
-    gapX: spaceValues("gap-x"),
-    gapY: spaceValues("gap-y"),
-  },
-  defaultVariants: {
-    direction: "default",
-    align: "default",
-    justify: "default",
-  },
-})
-
-export const HStackVariants = cva(`flex`, {
-  variants: {
-    ...flexBoxCommon,
-    gap: spaceValues("gap-x"),
-  },
-  defaultVariants: {
-    direction: "row",
-    align: "default",
-    justify: "default",
-  },
-})
-
-export const VStackVariants = cva(`flex`, {
-  variants: {
-    ...flexBoxCommon,
-    gap: spaceValues("gap-y"),
-  },
-  defaultVariants: {
-    direction: "column",
-    align: "default",
-    justify: "default",
-  },
-})
-
-export const TypographyVariants = cva(``, {
-  variants: {
-    typoColor: textColorValues,
-    size: fontValues,
-    weight: fontWeightValues,
-    whiteSpace: {
-      normal: "whitespace-normal",
-      nowrap: "whitespace-nowrap",
-      pre: "whitespace-pre",
-      preLine: "whitespace-pre-line",
-      preWrap: "whitespace-pre-wrap",
-    },
-  },
-  defaultVariants: {
-    typoColor: "black",
-    size: "base",
-    weight: 400,
-    whiteSpace: "normal",
-  },
-})
