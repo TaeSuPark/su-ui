@@ -11,9 +11,9 @@ import {
 export const FlexBoxVariants = cva(`flex`, {
   variants: {
     ...flexBoxCommon,
-    gap: spaceValues("gap"),
-    gapX: spaceValues("gap-x"),
-    gapY: spaceValues("gap-y"),
+    gap: spaceValues.gap,
+    gapX: spaceValues.gapX,
+    gapY: spaceValues.gapY,
     backgroundColor: bgColorValues,
   },
   defaultVariants: {
@@ -26,7 +26,7 @@ export const FlexBoxVariants = cva(`flex`, {
 export const HStackVariants = cva(`flex`, {
   variants: {
     ...flexBoxCommon,
-    gap: spaceValues("gap-x"),
+    gap: spaceValues.gapX,
     backgroundColor: bgColorValues,
   },
   defaultVariants: {
@@ -39,7 +39,7 @@ export const HStackVariants = cva(`flex`, {
 export const VStackVariants = cva(`flex`, {
   variants: {
     ...flexBoxCommon,
-    gap: spaceValues("gap-y"),
+    gap: spaceValues.gapY,
     backgroundColor: bgColorValues,
   },
   defaultVariants: {
